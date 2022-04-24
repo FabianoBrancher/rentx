@@ -7,22 +7,9 @@ interface IRequest {
     description: string;
 }
 
-/**
- * [x] - Definir o tipo de retorno
- * [x] - Alterar o retorno de erro
- * [x] - Acessar o repositório
- * [x] - Retornar algo
- */
-
 @injectable()
 class CreateCategoryUseCase {
-    // private categoriesRepository: CategoriesRepository;
 
-    // constructor(categoriesRepository: CategoriesRepository) {
-    //     this.categoriesRepository = categoriesRepository;
-    // }
-
-    // ou um hack do Javascript
     constructor(
         @inject("CategoriesRepository")
         private categoriesRepository: ICategoriesRepository) {
